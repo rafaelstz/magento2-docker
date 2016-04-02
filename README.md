@@ -17,7 +17,7 @@ $ docker pull magento/centos:v1
 - Launch container
 
 ```
-$ docker run --cap-add=ALL -p 127.0.0.1:80:80 -e VIRTUAL_HOST=magento2.docker.loc -i -t magento/centos:v1 /bin/bash
+$ docker run --cap-add=ALL -p 80:80 -e VIRTUAL_HOST=magento2.docker.loc -i -t magento/centos:v1 bash
 ```
 
 - After container is launched, start services
@@ -50,7 +50,7 @@ $ docker build -t <image-name>:<version> <path-to-repository-files>
 - Launch container
 
 ```
-$ docker run --cap-add=ALL -p 127.0.0.1:80:80 -e VIRTUAL_HOST=magento2.docker.loc -i -t <image-name>:<version> /bin/bash
+$ docker run --cap-add=ALL -p 80:80 -e VIRTUAL_HOST=magento2.docker.loc -i -t <image-name>:<version> bash
 ```
 
 - After container is launched, start services
