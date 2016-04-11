@@ -1,5 +1,11 @@
 FROM centos:centos6
 
+MAINTAINER Magento
+
+VOLUME /var/www/app/magento2.docker.loc/magento2
+WORKDIR /var/www/app/magento2.docker.loc/magento2
+EXPOSE 80
+
 # Installing base components
 RUN yum -y install wget curl unzip supervisor g++ make mc vim tar gcc pcre-devel openssl-devel patch libmcrypt-devel libxml2-devel bzip2-devel libcurl-devel readline-devel git
 RUN yum -y update
